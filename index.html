@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+<script>
+    let Temperature = function () {
+        this.doC = -273;
+
+        this.getDoC = function () {
+            return this.doC;
+        }
+        this.setDoC = function (c) {
+            if(c<this.doC){
+                this.doC = this.doC;
+            }else{
+                this.doC = c;
+            }
+        }
+        this.doC_doF = function () {
+            return 1.8*this.doC+32;
+        }
+        this.doC_doK = function () {
+            return this.doC + 273.15;
+        }
+    }
+
+    let Temp = new Temperature();
+    Temp.setDoC(25);
+    document.write('C : '+Temp.getDoC()+'<br>'+'F : '+Temp.doC_doF()+'<br>'+'K : '+Temp.doC_doK());
+
+
+</script>
+</body>
+</html>
